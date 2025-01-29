@@ -256,12 +256,19 @@ body {
       justify-content: center; /* Centrer verticalement */
       align-items: center; /* Centrer horizontalement */
       text-align: center; /* Centrer le texte */
-      padding: 0 3%; /* Réduire l'espacement */
+      padding: 0 2%; /* Réduire l'espacement */
   }
-
+  
+  .nav-links a {
+    color: white;
+    font-size: 0.7rem;
+    text-decoration: none;
+    font-weight:90;
+    transition: color 0.3s ease;
+  }
   .hero-content {
       max-width: 100%; /* Utiliser toute la largeur disponible */
-      margin-bottom: 2rem; /* Espace entre le texte et l'image */
+      margin-bottom: 1rem; /* Espace entre le texte et l'image */
   }
 
   .theme-toggle {
@@ -365,12 +372,12 @@ body {
 }
 
 .nav-links li {
-  margin: 0.1rem 0; /* Reduced margin between mobile links */
+  margin: 1 0; /* Reduced margin between mobile links */
 }
 
 .nav-links a {
   color: white;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-decoration: none;
   font-weight:90;
   transition: color 0.3s ease;
