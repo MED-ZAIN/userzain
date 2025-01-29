@@ -111,8 +111,9 @@ body {
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 500px;
   position: relative;
+  
 }
 
 .hero h1 {
@@ -263,6 +264,17 @@ body {
       margin-bottom: 2rem; /* Espace entre le texte et l'image */
   }
 
+  .theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+    
+  }
+
   .hero-image {
       padding-left: 0; /* Supprimer le padding à gauche */
       text-align: center; /* Centrer l'image */
@@ -297,6 +309,7 @@ body {
 
   .nav-right {
       margin-top: 1rem; /* Espace entre les liens et le bouton de thème */
+      margin-bottom: -20px;
   }
 }
 
@@ -331,16 +344,14 @@ body {
   color: var(--text-light);
   font-size: 1.5rem;
   cursor: pointer;
-  margin-left: 2rem;
+  margin-left: 1rem;
   transition: transform 0.3s ease;
+  
 }
 
 .theme-toggle:hover {
   transform: rotate(20deg);
 }
-
-
-
 
 
 .nav-menu.active {
@@ -359,7 +370,7 @@ body {
 
 .nav-links a {
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
   font-weight:90;
   transition: color 0.3s ease;
