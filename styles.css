@@ -18,6 +18,8 @@ body {
   overflow-x: hidden;
 }
 
+/* Navbar */
+/* Styles de base pour la barre de navigation */
 .navbar {
   position: fixed;
   width: 100%;
@@ -38,6 +40,8 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -64,6 +68,94 @@ body {
   width: 100%;
 }
 
+/* Styles pour les écrans mobiles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Aligner les éléments verticalement */
+      padding: 1rem 5%; /* Réduire l'espacement */
+  }
+
+  .nav-links {
+      justify-content: center; /* Centrer les liens horizontalement */
+      gap: 1rem; /* Réduire l'espace entre les liens */
+      margin-top: 1rem; /* Ajouter un espace entre le titre et les liens */
+  }
+
+  .nav-right {
+      margin-top: 1rem; /* Ajouter un espace entre les liens et le bouton de thème */
+  }
+}
+
+
+
+/* Hamburger menu for mobile */
+.hamburger-menu {
+  position: fixed;
+  top: 1.5rem;
+  left: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text-light);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+/* Afficher le menu hamburger lorsqu'on survole le côté gauche */
+body:hover .hamburger-menu {
+  opacity: 1;
+}
+
+
+
+/* Drawer Menu */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(42, 42, 42, 0.95);
+  color: var(--text-light);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 4rem;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer-content {
+  display: flex;
+  justify-content: center;
+}
+
+.drawer-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.drawer-links li {
+  margin: 1.5rem 0;
+}
+
+.drawer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.drawer-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -208,6 +300,7 @@ body {
   transform: translateY(0);
 }
 
+/* Cursor personnalisé */
 .cursor {
   width: 40px;
   height: 40px;
@@ -220,6 +313,7 @@ body {
   z-index: 1000;
 }
 
+/* Réactivité pour les écrans plus petits */
 @media (max-width: 768px) {
   .hero h1 {
       font-size: 3rem;
@@ -236,12 +330,68 @@ body {
   .hero-content {
       padding-right: 20px;
   }
+
+  
+
+ 
+    .nav-links {
+        flex-direction: row; /* Affichage horizontal */
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    
 }
 
+
+  .nav-links li {
+      padding: 10px 0;
+      text-align: center;
+      
+  }
+
+  .hero {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .hero-content {
+      max-width: 100%;
+      text-align: center;
+  }
+
+  .hero-image {
+      margin-top: 20px;
+      text-align: center;
+  }
+
+  .hero-image img {
+      max-width: 80%;
+  }
+}
+
+/* Theme sombre */
 [data-theme="dark"] {
   --primary-color: #f5f5f5;
   --text-light: #2a2a2a;
   --gradient: linear-gradient(135deg, #2a2a2a 0%, #FF4D5A 100%);
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(245, 245, 245, 0.95);
+}
+
+[data-theme="dark"] .hero::before {
+  opacity: 0.2;
+}
+
+/* Image circulaire */
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: rotate(1deg);
+  transition: none;
 }
 
 .theme-toggle {
@@ -258,36 +408,49 @@ body {
   transform: rotate(20deg);
 }
 
-.nav-right {
+
+
+/* MENU MOBILE */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 42, 42, 0.95);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 999;
 }
 
-.navbar {
-  justify-content: space-between;
+.mobile-menu.active {
+  transform: translateY(0);
 }
 
-[data-theme="dark"] .navbar {
-  background: rgba(245, 245, 245, 0.95);
+.mobile-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
 }
 
-[data-theme="dark"] .nav-links a {
-  color: var(--text-light);
+.mobile-links li {
+  margin: 1.5rem 0;
 }
 
-[data-theme="dark"] .hero::before {
-  opacity: 0.2;
+.mobile-links a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
 }
 
-
-.hero-image img {
-  width: 300px;               /* Taille de l'image */
-  height: 300px;              /* Taille de l'image (doit être égale à la largeur pour un cercle) */
-  object-fit: cover;          /* Assurer que l'image couvre toute la zone sans déformation */
-  border-radius: 50%;         /* Rendre l'image ovale (ou circulaire si largeur et hauteur égales) */
-  transform: rotate(1deg);   /* Rotation fixe de l'image */
-  transition: none;           /* Pas de transition pour la rotation */
+.mobile-links a:hover {
+  color: var(--accent-color);
 }
 
 
