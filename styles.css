@@ -1,0 +1,293 @@
+:root {
+  --primary-color: #2a2a2a;
+  --accent-color: #FF4D5A;
+  --text-light: #f5f5f5;
+  --gradient: linear-gradient(135deg, #FF4D5A 0%, #2a2a2a 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--primary-color);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem 5%;
+  background: rgba(42, 42, 42, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient);
+  opacity: 0.1;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-image {
+  padding-left: 30vh;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--text-light);
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button:hover {
+  color: var(--primary-color);
+}
+
+.cta-button:hover::before {
+  left: 0;
+}
+
+.projects {
+  padding: 6rem 10%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 3rem;
+  }
+
+  .project-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .navbar {
+      padding: 1rem 3%;
+  }
+
+  .hero-content {
+      padding-right: 20px;
+  }
+}
+
+[data-theme="dark"] {
+  --primary-color: #f5f5f5;
+  --text-light: #2a2a2a;
+  --gradient: linear-gradient(135deg, #2a2a2a 0%, #FF4D5A 100%);
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar {
+  justify-content: space-between;
+}
+
+[data-theme="dark"] .navbar {
+  background: rgba(245, 245, 245, 0.95);
+}
+
+[data-theme="dark"] .nav-links a {
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .hero::before {
+  opacity: 0.2;
+}
+
+
+.hero-image img {
+  width: 300px;               /* Taille de l'image */
+  height: 300px;              /* Taille de l'image (doit être égale à la largeur pour un cercle) */
+  object-fit: cover;          /* Assurer que l'image couvre toute la zone sans déformation */
+  border-radius: 50%;         /* Rendre l'image ovale (ou circulaire si largeur et hauteur égales) */
+  transform: rotate(1deg);   /* Rotation fixe de l'image */
+  transition: none;           /* Pas de transition pour la rotation */
+}
+
+

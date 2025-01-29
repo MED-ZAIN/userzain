@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Élégant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Portfolio</h2>
+        <ul class="nav-links">
+            <li><a href="#home">A propos</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#certificat">Certificat</a></li>
+            <li><a href="#loisir">Loisir</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <h1>Ingenieur IT &<br>Dev App Sec.Reseau</h1>
+            <p>Développeur full-stack & Securite Reseaux</p>
+            <button href="medzain.pdf" class="cta-button">Telecharger Mon CV</button>
+        </div>
+        <div class="hero-image">
+            <img src="images/medzain.png" alt="Image d'illustration" class="image-right">
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title reveal">Mes Projets</h2>
+        <div class="project-grid">
+            <div class="project-card reveal">
+                <img src="project1.jpg" class="project-image" alt="Projet 1">
+                <div class="project-info">
+                    <h3>Plateforme E-commerce</h3>
+                    <p>React · Node.js · MongoDB</p>
+                </div>
+            </div>
+            <!-- Ajouter plus de projets -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleTheme() {
+            document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+        }
+    </script>
+</body>
+</html>
