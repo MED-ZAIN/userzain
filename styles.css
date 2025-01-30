@@ -78,7 +78,7 @@ body {
   .nav-links {
     justify-content: center;
     gap: 0.5rem; /* Further reduced gap on mobile */
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .nav-right {
