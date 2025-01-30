@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Élégant</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,23 +14,43 @@
     <nav class="navbar">
         <h2>Portfolio</h2>
         <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
+            <li><a href="#home">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projets</a></li>
+            <li><a href="#projects">Project</a></li>
             <li><a href="#certificat">Certificat</a></li>
             
         </ul>
         <div class="nav-right">
-            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
         </div>
     </nav>
 
     <section class="hero" id="home">
         <div class="hero-content reveal">
-            <h1>Ingenieur IT &<br>Dev App Sec.Reseau</h1>
-            <p>Développeur full-stack & Securite Reseaux</p>
-            <button href="medzain.pdf" class="cta-button">Telecharger Mon CV</button>
+            <h1>Ingénieur IT & Génie Logiciel</h1>
+            <p>Développeur full-stack & Sécurité Réseaux</p>
+            
+            
+            <!-- Section pour les icônes de compétences et la description -->
+            <div class="skills-section">
+                <div class="skills-icons">
+                    <i class="devicon-react-original colored" title="React"></i>
+                    <i class="devicon-angularjs-plain colored" title="Angular"></i>
+                    <i class="devicon-git-plain colored" title="Git"></i>
+                    <i class="devicon-laravel-plain colored" title="Laravel"></i>
+                    <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+                    <i class="devicon-java-plain colored" title="Java"></i>
+                   
+                    
+
+                </div>
+                
+            </div>
+
+            <a href="medzain.pdf" download="medzain.pdf">
+                <button class="cta-button">Télécharger Mon CV</button>
+            </a>
         </div>
         <div class="hero-image">
             <img src="images/medzain.png" alt="Image d'illustration" class="image-right">
@@ -40,17 +61,73 @@
 
 
 
+
+
+
+
+
+
+
+
+
     <section class="projects" id="projects">
         <h2 class="section-title reveal">Mes Projets</h2>
         <div class="project-grid">
+            <!-- Projet 1 : Sécurité des infrastructures réseau -->
             <div class="project-card reveal">
-                <img src="project1.jpg" class="project-image" alt="Projet 1">
+                <div class="project-image-container">
+                    <img src="images/imageU.png" class="project-image" alt="Sécurité des infrastructures réseau">
+                </div>
                 <div class="project-info">
-                    <h3>Plateforme E-commerce</h3>
-                    <p>React · Node.js · MongoDB</p>
+                    <h3>Sécurité des infrastructures réseau</h3>
+                    <p>Configuration : ADDS, OSPF, Sw Port-Sec, VLANs, FortiGate</p>
+                    <p><strong>African Lion 2024</strong></p>
+                    <p><strong>Union IT Service, Casablanca</strong> - Mai 2024</p>
+                </div>
+            </div>
+    
+            <!-- Projet 2 : Opérations cyberdéfensives -->
+            <div class="project-card reveal">
+                <div class="project-image-container">
+                    <img src="images/imageAF.png" class="project-image" alt="Opérations cyberdéfensives">
+                </div>
+                <div class="project-info">
+                    <h3>Opérations cyberdéfensives</h3>
+                    <p>Outils : Security Onion, Caldera, Wireshark</p>
+                    <p><strong>État-Major de la Zone Sud, Agadir</strong></p>
+                    <p><strong>African Lion 2024</strong> - 15 Septembre 2024</p>
                 </div>
             </div>
         </div>
+
+         <!-- Projet 3 :  cyberSecurity -->
+         <div class="project-card reveal">
+            <div class="project-image-container">
+                <img src="images/imageAF.png" class="project-image" alt="Opérations cyberdéfensives">
+            </div>
+            <div class="project-info">
+                <h3>Opérations cyberdéfensives</h3>
+                <p>Outils : Security Onion, Caldera, Wireshark</p>
+                <p><strong>État-Major de la Zone Sud, Agadir</strong></p>
+                <p><strong>African Lion 2024</strong> - 15 Septembre 2024</p>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Projet 4 : Amazon -->
+     <div class="project-card reveal">
+        <div class="project-image-container">
+            <img src="images/imageAM.png" class="project-image" alt="Opérations cyberdéfensives">
+        </div>
+        <div class="project-info">
+            <h3>Opérations cyberdéfensives</h3>
+            <p>Outils : Security Onion, Caldera, Wireshark</p>
+            <p><strong>État-Major de la Zone Sud, Agadir</strong></p>
+            <p><strong>African Lion 2024</strong> - 15 Septembre 2024</p>
+        </div>
+    </div>
+</div>
     </section>
 
     <script src="script.js"></script>

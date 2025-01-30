@@ -118,8 +118,8 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 4.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.1;
   position: relative;
   overflow: hidden;
@@ -137,7 +137,7 @@ body {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   opacity: 0.9;
 }
 
@@ -155,6 +155,7 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
+  margin-top: 20px;
 }
 
 .cta-button::before {
@@ -175,62 +176,6 @@ body {
 
 .cta-button:hover::before {
   left: 0;
-}
-
-.projects {
-  padding: 6rem 10%;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-}
-
-.project-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.project-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-info {
-  opacity: 1;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Cursor personnalisé */
@@ -388,3 +333,144 @@ body {
 }
 
 
+
+
+
+
+
+
+
+.skills-icons {
+  display: flex;
+ 
+  gap: 20px; /* Espace entre les icônes */
+  font-size: 2.5rem; /* Taille des icônes */
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.skills-icons i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.2); /* Effet de zoom au survol */
+  color: #007BFF; /* Changement de couleur au survol */
+}
+
+
+
+
+
+
+
+/* Section Projets */
+.projects {
+  padding: 6rem 10%;
+  background: rgba(42, 42, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+/* Grille des projets en horizontal */
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Carte de projet en horizontal */
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image du projet */
+.project-image-container {
+  width: 150px; /* Taille réduite pour les petites images */
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+/* Informations du projet */
+.project-info {
+  flex: 1;
+}
+
+.project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+  opacity: 0.8;
+}
+
+.project-info p strong {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image-container {
+    width: 100%;
+    height: 200px;
+  }
+}
