@@ -94,6 +94,7 @@ body {
   padding: 0px 10%;
   position: relative;
   overflow: hidden;
+  z-index: 1; /* Ajout d'un z-index pour s'assurer que la section soit au-dessus de la navbar */
 }
 
 .hero::before {
@@ -112,6 +113,7 @@ body {
 .hero-content {
   max-width: 500px;
   position: relative;
+  z-index: 2; /* Assurez-vous que le contenu soit au-dessus du background */
 }
 
 .hero h1 {
@@ -191,13 +193,15 @@ body {
 
 /* Styles pour les écrans mobiles */
 @media (max-width: 768px) {
-  /* Centrer le contenu de la section hero */
+  /* Ajuster la section .hero pour qu'elle soit visible sous la navbar */
   .hero {
     flex-direction: column;
-    justify-content: center; /* Centrer verticalement */
-    align-items: center; /* Centrer horizontalement */
-    text-align: center; /* Centrer le texte */
-    padding: 0 2%; /* Réduire l'espacement */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%; /* Espacement plus ajusté */
+    padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
+    z-index: 1; /* Assure que la section est au-dessus de la navbar */
   }
 
   .nav-links a {
@@ -209,8 +213,8 @@ body {
   }
 
   .hero-content {
-    max-width: 100%; /* Utiliser toute la largeur disponible */
-    margin-bottom: 1rem; /* Espace entre le texte et l'image */
+    max-width: 100%;
+    margin-bottom: 1rem;
   }
 
   .theme-toggle {
@@ -224,42 +228,60 @@ body {
   }
 
   .hero-image {
-    padding-left: 0; /* Supprimer le padding à gauche */
-    text-align: center; /* Centrer l'image */
+    padding-left: 0;
+    text-align: center;
   }
 
   .hero-image img {
-    max-width: 100%; /* Ajuster la taille de l'image */
+    max-width: 100%;
     height: auto;
   }
 
   /* Centrer le contenu de la section projects */
   .projects {
-    padding: 3rem 5%; /* Réduire l'espacement */
-    text-align: center; /* Centrer le texte */
+    padding: 3rem 5%;
+    text-align: center;
   }
 
   .project-grid {
-    grid-template-columns: 1fr; /* Une seule colonne en mode mobile */
-    gap: 1.5rem; /* Espacement entre les cartes */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-card {
-    text-align: center; /* Centrer le contenu des cartes */
+    text-align: center;
   }
 
-  /* Centrer les liens de navigation */
   .nav-links {
-    justify-content: center; /* Centrer les liens horizontalement */
-    gap: 1rem; /* Espacement entre les liens */
-    margin-top: 1rem; /* Espace entre le titre et les liens */
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .nav-right {
-    margin-top: 1rem; /* Espace entre les liens et le bouton de thème */
+    margin-top: 1rem;
     margin-bottom: -20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Theme sombre */
 [data-theme="dark"] {
@@ -487,15 +509,17 @@ body {
 
 /* Section Projets */
 .projects {
-  padding: 4rem 5%;
+  padding: 5rem 2rem;
   border-radius: 15px;
   margin: 2rem auto;
   max-width: 1200px;
-  color: var(--text-color);
+  color: var(--text-light);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+
 
 .section-title {
   font-family: 'Playfair Display', serif;
@@ -504,6 +528,28 @@ body {
   margin-bottom: 2rem;
   position: relative;
 }
+
+.projects h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.projects h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;  /* largeur de la ligne */
+  height: 4px;   /* hauteur de la ligne */
+  background: var(--accent-color);  /* couleur de la ligne */
+}
+
+
+
+
+
 
 .section-title::after {
   content: '';
