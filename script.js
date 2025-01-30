@@ -73,3 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
+// script.js
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Vérifier le thème stocké dans localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+}
+
+// Basculer entre les modes
