@@ -84,4 +84,5 @@ if (savedTheme) {
     themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 }
 
-// Basculer entre les modes
+// loading
+

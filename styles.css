@@ -739,15 +739,7 @@ body {
   position: relative;
 }
 
-.projects h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: var(--accent-color);
-}
+
 
 .section-title::after {
   content: '';
@@ -915,6 +907,19 @@ body {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: var(--accent-color);
+  }
+
+}
 
 
 
@@ -934,9 +939,11 @@ body {
 }
 
 .certificates h2 {
-  font-size: 2em;
-  color: var(--accent-color);
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  
 }
 
 .certificates p {
@@ -986,6 +993,22 @@ body {
     background: var(--primary-color);
     color: var(--text-light);
   }
+  .certificates h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .certificates h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: var(--accent-color);
+  }
 
   .certificate-card {
     background: var(--primary-color);
@@ -1004,6 +1027,8 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  
 
   .certificate-card {
     width: 90%;
@@ -1072,6 +1097,7 @@ body {
   .social-icons {
       gap: 10px; /* Réduire l'espace entre les icônes */
       bottom: 10px; /* Ajuster la position en bas */
+      position: fixed;
   }
 
   .social-icon {
@@ -1115,4 +1141,6 @@ body {
 
 
 
+
+/* Loading */
 
