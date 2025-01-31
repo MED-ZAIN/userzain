@@ -709,6 +709,7 @@ body {
   --text-color: #000000;
   --accent-color: #ff4c60;
   --shadow-color: rgba(0, 0, 0, 0.6);
+  --text-light: #ffffff;
 }
 
 /* Section Projets */
@@ -722,8 +723,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .section-title {
   font-family: 'Playfair Display', serif;
@@ -745,15 +744,10 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;  /* largeur de la ligne */
-  height: 4px;   /* hauteur de la ligne */
-  background: var(--accent-color);  /* couleur de la ligne */
+  width: 100px;
+  height: 4px;
+  background: var(--accent-color);
 }
-
-
-
-
-
 
 .section-title::after {
   content: '';
@@ -855,36 +849,69 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects {
-      padding: 3rem 3%;
+    padding: 3rem 1rem;
   }
-  
+
   .project-grid {
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
-  
+
   .project-card {
-      width: 140px;
-      height: 230px;
-      padding: 1rem;
+    width: 140px !important;
+    height: 230px;
+    padding: 1rem;
+    margin: 0;
   }
 
   .project-image-container {
-      width: 70px;
-      height: 70px;
+    width: 70px;
+    height: 70px;
   }
-  
+
   .project-info {
-      margin-top: 5px;
+    margin-top: 5px;
+    width: 100%;
   }
   
   .project-info h3 {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
   }
   
   .project-info p {
-      font-size: 0.7rem;
+    font-size: 0.65rem;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .project-card {
+    width: 100% !important;
+    height: auto;
+    min-height: 200px;
+    padding: 0.8rem;
+  }
+  
+  .projects h2 {
+    font-size: 2rem;
+  }
+  
+  .project-info h3 {
+    font-size: 0.75rem;
+  }
+  
+  .project-info p {
+    font-size: 0.6rem;
   }
 }
 
@@ -986,6 +1013,105 @@ body {
 
 
 
+
+
+
+/* Section pour les icônes en bas */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: fixed; /* Position fixe pour rester visible même en scrollant */
+  bottom: 20px; /* Marges en bas */
+  left: 50%; /* Centrer horizontalement */
+  transform: translateX(-50%); /* Ajuster pour un centrage parfait */
+  z-index: 1000; /* Assurer que cela soit au-dessus des autres éléments */
+  flex-wrap: wrap; /* Gérer le débordement sur petits écrans */
+}
+
+/* Style des icônes */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: hsl(0, 9%, 93%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Couleurs spécifiques pour chaque icône */
+.social-icon .fa-github {
+  color: #333;
+}
+
+.social-icon .fa-envelope {
+  color: #d14836; /* Gmail rouge */
+}
+
+.social-icon .fa-linkedin {
+  color: #0077b5; /* LinkedIn bleu */
+}
+
+.social-icon .fa-whatsapp {
+  color: #25d366; /* WhatsApp vert */
+}
+
+/* Responsive Design pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .social-icons {
+      gap: 10px; /* Réduire l'espace entre les icônes */
+      bottom: 10px; /* Ajuster la position en bas */
+  }
+
+  .social-icon {
+      width: 40px; /* Réduire la taille des icônes */
+      height: 40px;
+      font-size: 1.2rem;
+  }
+}
+
+/* Appliquer des couleurs élégantes */
+.social-icon {
+  background-color: #1e3a8a; /* Bleu roi profond */
+  color: #ffffff; /* Blanc pur */
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet au survol */
+.social-icon:hover {
+  background: #ffd700; /* Doré éclatant */
+  color: #000000; /* Noir pour contraste */
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  .social-icon {
+    background-color: #ffffff; /* Blanc pur */
+    color: #1e3a8a; /* Bleu roi pour contraste */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+  }
+
+  .social-icon:hover {
+    background: #c0c0c0; /* Argenté brillant */
+    color: #000000; /* Noir pour lisibilité */
+    transform: scale(1.1);
+  }
+}
 
 
 
