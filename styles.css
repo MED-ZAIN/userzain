@@ -1080,12 +1080,13 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  position: fixed; /* Position fixe pour rester visible même en scrollant */
-  bottom: 20px; /* Marges en bas */
-  left: 50%; /* Centrer horizontalement */
-  transform: translateX(-50%); /* Ajuster pour un centrage parfait */
-  z-index: 1000; /* Assurer que cela soit au-dessus des autres éléments */
-  flex-wrap: wrap; /* Gérer le débordement sur petits écrans */
+  position: fixed; /* Toujours visible */
+  bottom: 20px;
+  left: 0;
+  right: 0; /* Centrer sur toute la largeur */
+  z-index: 1000; /* S'assurer qu'elles restent visibles */
+  flex-wrap: nowrap; /* Éviter le retour à la ligne */
+  width: 100%; /* Évite le décalage sur mobile */
 }
 
 /* Style des icônes */
@@ -1105,34 +1106,29 @@ body {
 }
 
 .social-icon:hover {
-  background: #ffd700; /* Doré éclatant */
-  color: #000000; /* Noir pour contraste */
+  background: #ffd700;
+  color: #000000;
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Couleurs spécifiques pour chaque icône */
-.social-icon .fa-github { color: #333; }
-.social-icon .fa-envelope { color: #d14836; }
-.social-icon .fa-linkedin { color: #0077b5; }
-.social-icon .fa-whatsapp { color: #25d366; }
+/* Appliquer les couleurs spécifiques correctement */
+.social-icon .fa-github { color: #414040 !important; }
+.social-icon .fa-envelope { color: #fd3d3d !important; }
+.social-icon .fa-linkedin { color: #3c8dfe !important; }
+.social-icon .fa-whatsapp { color: #25fa9a !important; }
 
-/* Responsive Design pour les écrans plus petits */
+/* Responsive pour mobile */
 @media screen and (max-width: 768px) {
   .social-icons {
-      gap: 10px;
-      bottom: 10px;
-      position: fixed;
-      flex-wrap: nowrap; /* Assurer qu'elles restent sur une seule ligne */
-      width: 100%; /* Prendre toute la largeur */
-      left: 0;
-      justify-content: center;
+    bottom: 10px;
+    gap: 10px;
   }
 
   .social-icon {
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
   }
 }
 
@@ -1147,9 +1143,9 @@ body {
   .social-icon:hover {
     background: #c0c0c0;
     color: #000000;
-    transform: scale(1.1);
   }
 }
+
 
 
 
