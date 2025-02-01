@@ -18,12 +18,14 @@ body {
   overflow-x: hidden;
 }
 
+
+
 /* Navbar */
 /* Styles de base pour la barre de navigation */
 .navbar {
   position: fixed;
   width: 100%;
-  padding: 1.5rem 5%;
+  padding: 1rem 5%;
   background: rgba(42, 42, 42, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -72,7 +74,7 @@ body {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Aligner les éléments verticalement */
-    padding: 1rem 5%; /* Réduire l'espacement */
+    padding: 0.9rem 5%; /* Réduire l'espacement */
   }
 
   .nav-links {
@@ -132,7 +134,7 @@ body {
   left: 0;
   width: 100px;
   height: 4px;
-  background: var(--accent-color);
+  
 }
 
 .hero p {
@@ -465,6 +467,32 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .experience {
   background: var(--primary-color);
   padding: 5rem 2rem;
@@ -474,12 +502,14 @@ body {
   overflow: hidden;
 }
 
+
+
 .experience h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   position: relative;
-  display: inline-block;
+  
 }
 
 .experience h2::after {
@@ -722,20 +752,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
+  background: var(--primary-color);
   text-align: center;
-  margin-bottom: 2rem;
   position: relative;
+  overflow: hidden;
 }
 
 .projects h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.projects h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--accent-color);
+}
+
+
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
   position: relative;
 }
 
@@ -907,19 +953,7 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
 
-  .projects h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100px;
-    height: 4px;
-    background: var(--accent-color);
-  }
-
-}
 
 
 
@@ -1062,61 +1096,14 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: hsl(0, 9%, 93%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #1e3a8a; /* Bleu roi profond */
+  color: #ffffff; /* Blanc pur */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  color: #000;
   font-size: 1.5rem;
 }
 
-.social-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Couleurs spécifiques pour chaque icône */
-.social-icon .fa-github {
-  color: #333;
-}
-
-.social-icon .fa-envelope {
-  color: #d14836; /* Gmail rouge */
-}
-
-.social-icon .fa-linkedin {
-  color: #0077b5; /* LinkedIn bleu */
-}
-
-.social-icon .fa-whatsapp {
-  color: #25d366; /* WhatsApp vert */
-}
-
-/* Responsive Design pour les écrans plus petits */
-@media screen and (max-width: 768px) {
-  .social-icons {
-      gap: 10px; /* Réduire l'espace entre les icônes */
-      bottom: 10px; /* Ajuster la position en bas */
-      position: fixed;
-  }
-
-  .social-icon {
-      width: 40px; /* Réduire la taille des icônes */
-      height: 40px;
-      font-size: 1.2rem;
-  }
-}
-
-/* Appliquer des couleurs élégantes */
-.social-icon {
-  background-color: #1e3a8a; /* Bleu roi profond */
-  color: #ffffff; /* Blanc pur */
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Effet au survol */
 .social-icon:hover {
   background: #ffd700; /* Doré éclatant */
   color: #000000; /* Noir pour contraste */
@@ -1124,21 +1111,45 @@ body {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Couleurs spécifiques pour chaque icône */
+.social-icon .fa-github { color: #333; }
+.social-icon .fa-envelope { color: #d14836; }
+.social-icon .fa-linkedin { color: #0077b5; }
+.social-icon .fa-whatsapp { color: #25d366; }
+
+/* Responsive Design pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  .social-icons {
+      gap: 10px;
+      bottom: 10px;
+      position: fixed;
+      flex-wrap: nowrap; /* Assurer qu'elles restent sur une seule ligne */
+      width: 100%; /* Prendre toute la largeur */
+      left: 0;
+      justify-content: center;
+  }
+
+  .social-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+  }
+}
+
 /* Mode sombre */
 @media (prefers-color-scheme: dark) {
   .social-icon {
-    background-color: #ffffff; /* Blanc pur */
-    color: #1e3a8a; /* Bleu roi pour contraste */
+    background-color: #ffffff;
+    color: #1e3a8a;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
   }
 
   .social-icon:hover {
-    background: #c0c0c0; /* Argenté brillant */
-    color: #000000; /* Noir pour lisibilité */
+    background: #c0c0c0;
+    color: #000000;
     transform: scale(1.1);
   }
 }
-
 
 
 
