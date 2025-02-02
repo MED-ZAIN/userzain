@@ -120,8 +120,8 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
   line-height: 1.1;
   position: relative;
   overflow: hidden;
@@ -201,10 +201,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 5%; /* Espacement plus ajusté */
+    padding: 0 3%; /* Espacement plus ajusté */
     padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
     z-index: 0; /* Assure que la section est au-dessus de la navbar */
   }
+
+ 
 
   .nav-links a {
     color: white;
