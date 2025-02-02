@@ -84,5 +84,20 @@ if (savedTheme) {
     themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 }
 
+
+document.getElementById('education-button').addEventListener('click', function() {
+  const content = document.getElementById('education-content');
+  // Toggle the content on mobile
+  if (window.innerWidth <= 768) {
+    this.classList.toggle('clicked');
+    if (this.classList.contains('clicked')) {
+      content.innerHTML = '<h2>Education</h2>';
+    } else {
+      content.innerHTML = '';
+    }
+  }
+});
+
+
 // loading
 

@@ -361,7 +361,7 @@ body {
 
 /*education */
 
-
+/* education */
 .education {
   background: var(--primary-color);
   padding: 5rem 2rem;
@@ -465,6 +465,28 @@ body {
   font-weight: 300;
   color: var(--text-light);
 }
+
+/* Show the Education title on mobile */
+@media (max-width: 768px) {
+  #education-content {
+    display: none;
+  }
+
+  #education-button.clicked + #education-content {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Keep the Education button style the same */
+  #education-content {
+    display: none; /* Ensure content doesn't show on desktop */
+  }
+}
+
+
+
 
 
 
