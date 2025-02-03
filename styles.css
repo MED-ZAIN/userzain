@@ -107,13 +107,13 @@ body {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Aligner les éléments verticalement */
-    padding: 0.9rem 5%; /* Réduire l'espacement */
+    padding: 0.8rem 4%; /* Réduire l'espacement */
   }
 
   .nav-links {
     justify-content: center;
     gap: 0.5rem; /* Further reduced gap on mobile */
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
 
   .nav-right {
