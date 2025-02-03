@@ -236,7 +236,7 @@ body {
     text-align: center;
     padding: 0 3%; /* Espacement plus ajusté */
     padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
-    z-index: 0; /* Assure que la section est au-dessus de la navbar */
+    z-index: -5; /* Assure que la section est au-dessus de la navbar */
   }
 
  
@@ -300,21 +300,6 @@ body {
     margin-bottom: -20px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
