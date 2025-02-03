@@ -353,6 +353,21 @@ body {
 }
 
 
+h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Playfair Display', serif;
+  text-align: justify;
+  padding: 0 8px; /* Ajout d’un léger padding pour éviter le collage aux bords */
+}
+
+/* Assurer la compatibilité mobile */
+@media (max-width: 768px) {
+  h5 {
+    font-size: 14px; /* Ajustement de la taille sur mobile si nécessaire */
+    line-height: 1.5; /* Amélioration de la lisibilité */
+  }
+}
 
 
 
