@@ -11,6 +11,39 @@
   box-sizing: border-box;
 }
 
+/* Container style to control the overall look */
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 3px solid rgb(248, 127, 127); /* Cursor-like effect */
+  animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
+
+
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--primary-color);
@@ -120,7 +153,7 @@ body {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   margin-bottom: 0.6rem;
   line-height: 1.1;
   position: relative;
@@ -379,61 +412,32 @@ h5 {
 /* education */
 .education {
   background: var(--primary-color);
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   text-align: center;
   color: var(--text-light);
-  position: relative;
-  overflow: hidden;
-}
-
-.education::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: var(--gradient);
-  opacity: 0.1;
-  transform: rotate(45deg);
-  z-index: -1;
-  animation: gradientRotate 10s linear infinite;
-}
-
-@keyframes gradientRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .education h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   position: relative;
-  letter-spacing: 1px;
 }
 
 .education h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
+  bottom: 0;
+  left: 0;
+  width: 100px;
   height: 4px;
   background: var(--accent-color);
-  border-radius: 2px;
 }
 
 .education p {
   font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
-  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 .education-button {
@@ -481,38 +485,23 @@ h5 {
 
 .education-list {
   list-style: none;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   padding: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .education-list li {
   font-size: 1.1rem;
   line-height: 1.8;
-  padding: 1.5rem;
+  padding: 1rem;
   border-left: 4px solid var(--accent-color);
-  margin-left: 1.5rem;
+  margin-left: 1rem;
   color: var(--text-light);
-  background: rgba(42, 42, 42, 0.9);
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: fadeInUp 0.5s ease forwards;
-}
-
-.education-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(255, 77, 90, 0.3);
-}
-
-.education-list li::before {
-  content: '🎓';
-  margin-right: 1rem;
-  font-size: 1.2rem;
-  color: var(--accent-color);
+  background: rgba(42, 42, 42, 0.85);
+  border-radius: 5px;
 }
 
 .education-list li strong {
@@ -523,42 +512,24 @@ h5 {
 .education-list li span {
   font-weight: 300;
   color: var(--text-light);
-  opacity: 0.9;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.education-list li:nth-child(1) { animation-delay: 0.2s; }
-.education-list li:nth-child(2) { animation-delay: 0.4s; }
-.education-list li:nth-child(3) { animation-delay: 0.6s; }
-.education-list li:nth-child(4) { animation-delay: 0.8s; }
-
+/* Show the Education title on mobile */
 @media (max-width: 768px) {
-  .education {
-    padding: 4rem 1rem;
+  #education-content {
+    display: none;
   }
 
-  .education h2 {
-    font-size: 2.2rem;
+  #education-button.clicked + #education-content {
+    display: block;
+    text-align: center;
   }
+}
 
-  .education-list li {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
-  .education-button {
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
+@media (min-width: 769px) {
+  /* Keep the Education button style the same */
+  #education-content {
+    display: none; /* Ensure content doesn't show on desktop */
   }
 }
 
