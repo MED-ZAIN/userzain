@@ -236,7 +236,7 @@ body {
     text-align: center;
     padding: 0 3%; /* Espacement plus ajusté */
     padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
-    z-index: 0; /* Assure que la section est au-dessus de la navbar */
+    z-index: 1001; /* Assure que la section est au-dessus de la navbar */
   }
 
  
@@ -1096,6 +1096,17 @@ h5 {
     background: #c0c0c0;
     color: #000000;
   }
+}
+
+.skills-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skills-icons img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 
 
