@@ -387,6 +387,9 @@ h5 {
   h5 {
     font-size: 14px; /* Ajustement de la taille sur mobile si nécessaire */
     line-height: 1.5; /* Amélioration de la lisibilité */
+    text-align: center;
+   
+  
   }
 }
 
