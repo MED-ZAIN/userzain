@@ -234,11 +234,15 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 3%; /* Espacement plus ajusté */
+    padding: 100 3% 0; /* Espacement plus ajusté */
     padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
-    z-index: 1001; /* Assure que la section est au-dessus de la navbar */
+    z-index: 0; /* Assure que la section est au-dessus de la navbar */
   }
 
+  .navbar {
+    flex-direction: column;
+    padding: 0.8rem 4%;
+  }
  
 
   .nav-links a {
