@@ -769,21 +769,42 @@ h5 {
 
 .skills-icons {
   display: flex;
- 
-  gap: 20px; /* Espace entre les icônes */
-  font-size: 2.5rem; /* Taille des icônes */
-  margin-bottom:0;
+  flex-wrap: wrap; /* Permet aux icônes de s’adapter sur plusieurs lignes si nécessaire */
+  gap: 15px; /* Réduction de l’espace entre les icônes */
+  font-size: 2.5rem; /* Taille des icônes sur desktop */
+  margin-bottom: 0;
   margin-left: 10px;
 }
 
-.skills-icons i {
+.skills-icons i, .skills-icons img {
   transition: transform 0.3s ease, color 0.3s ease;
+  width: 50px; /* Taille des images personnalisées (ex: Security Onion) */
+  height: 50px;
 }
 
-.skills-icons i:hover {
-  transform: scale(1.2); /* Effet de zoom au survol */
-  color: #007BFF; /* Changement de couleur au survol */
+.skills-icons i:hover, .skills-icons img:hover {
+  transform: scale(1.1); /* Effet de zoom plus subtil */
+  color: #007BFF;
 }
+
+/* Responsive design pour les écrans plus petits (mobile) */
+@media (max-width: 768px) {
+  .skills-icons {
+    gap: 10px; /* Réduction de l’espace entre les icônes */
+    font-size: 2rem; /* Réduction de la taille des icônes */
+    justify-content: center; /* Centrage des icônes sur mobile */
+  }
+
+  .skills-icons i, .skills-icons img {
+    width: 40px; /* Taille réduite des images */
+    height: 40px;
+  }
+
+  .skills-icons i:hover, .skills-icons img:hover {
+    transform: scale(1.05); /* Effet de zoom encore plus discret */
+  }
+}
+
 
 
 
