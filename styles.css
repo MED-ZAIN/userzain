@@ -107,7 +107,8 @@ body {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Aligner les éléments verticalement */
-    padding: 0.8rem 4%; /* Réduire l'espacement */
+    padding: 0.6rem 4%; /* Réduire l'espacement */
+    margin-bottom: 0;
   }
 
   .nav-links {
@@ -173,7 +174,7 @@ body {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .hero-image {
