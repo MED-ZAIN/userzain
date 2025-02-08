@@ -106,16 +106,31 @@ body {
 /* Styles pour les écrans mobiles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Aligner les éléments verticalement */
-    padding: 0.6rem 4%; /* Réduire l'espacement */
-    margin-bottom: 0;
+    padding: 0.5rem 3%; /* Reduced padding for mobile */
+    flex-direction: column;
+    justify-content: center; /* Center the navbar items */
   }
 
   .nav-links {
-    justify-content: center;
-    gap: 0.5rem; /* Further reduced gap on mobile */
-    margin-top: 0.2rem;
+    justify-content: center; /* Center nav links */
+    gap: 0.8rem; /* Adjust gap between links */
+    margin-top: 0.5rem;
   }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Reduce text size for mobile */
+    padding: 0.4rem 0;
+  }
+
+
+
+
+
+
+
+
+
+  
 
   .nav-right {
     margin-top: 0.6rem;
@@ -173,8 +188,8 @@ body {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.8;
+  margin-bottom: 0.4rem;
+  opacity: 0.6;
 }
 
 .hero-image {
@@ -297,6 +312,10 @@ body {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.4rem;
   }
 
   .nav-right {
@@ -797,6 +816,8 @@ h5 {
     gap: 10px; /* Réduction de l’espace entre les icônes */
     font-size: 2rem; /* Réduction de la taille des icônes */
     justify-content: center; /* Centrage des icônes sur mobile */
+    margin-bottom: 5px;
+    padding-bottom: 5px;
   }
 
   .skills-icons i, .skills-icons img {
