@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 
-/* Container style to control the overall look */
 h1 {
   font-family: 'Arial', sans-serif;
   font-size: 36px;
@@ -19,30 +18,18 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  border-right: 3px solid rgb(248, 127, 127); /* Cursor-like effect */
+  border-right: 3px solid rgb(248, 127, 127);
   animation: typing 3s steps(30) forwards, blink 0.75s step-end infinite;
 }
 
-/* Animation for typing effect */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-/* Cursor blinking effect */
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
-
-
-
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -51,10 +38,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
-/* Navbar */
-/* Styles de base pour la barre de navigation */
 .navbar {
   position: fixed;
   width: 100%;
@@ -73,7 +56,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 1rem; /* Reduced gap between links */
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -103,41 +86,29 @@ body {
   width: 100%;
 }
 
-/* Styles pour les écrans mobiles */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.5rem 3%; /* Reduced padding for mobile */
+    padding: 0.5rem 3%;
     flex-direction: column;
-    justify-content: center; /* Center the navbar items */
+    justify-content: center;
   }
 
   .nav-links {
-    justify-content: center; /* Center nav links */
-    gap: 0.8rem; /* Adjust gap between links */
+    justify-content: center;
+    gap: 0.8rem;
     margin-top: 0.5rem;
   }
 
   .nav-links a {
-    font-size: 0.9rem; /* Reduce text size for mobile */
+    font-size: 0.9rem;
     padding: 0.4rem 0;
   }
-
-
-
-
-
-
-
-
-
-  
 
   .nav-right {
     margin-top: 5px;
   }
 }
 
-/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -145,7 +116,7 @@ body {
   padding: 0px 10%;
   position: relative;
   overflow: hidden;
-  z-index: 1; /* Ajout d'un z-index pour s'assurer que la section soit au-dessus de la navbar */
+  z-index: 1;
 }
 
 .hero::before {
@@ -164,7 +135,7 @@ body {
 .hero-content {
   max-width: 500px;
   position: relative;
-  z-index: 2; /* Assurez-vous que le contenu soit au-dessus du background */
+  z-index: 2;
 }
 
 .hero h1 {
@@ -183,7 +154,6 @@ body {
   left: 0;
   width: 100px;
   height: 4px;
-  
 }
 
 .hero p {
@@ -229,7 +199,6 @@ body {
   left: 0;
 }
 
-/* Cursor personnalisé */
 .cursor {
   width: 40px;
   height: 40px;
@@ -242,31 +211,25 @@ body {
   z-index: 1000;
 }
 
-/* Styles pour les écrans mobiles */
 @media (max-width: 768px) {
-  /* Ajuster la section .hero pour qu'elle soit visible sous la navbar */
   .hero {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 100 3% 0; /* Espacement plus ajusté */
-    padding-top: 100px; /* Augmenter le padding-top pour éviter que la section soit cachée sous la navbar */
-    z-index: 0; /* Assure que la section est au-dessus de la navbar */
+    padding: 100 3% 0;
+    padding-top: 100px;
+    z-index: 0;
   }
 
   .navbar {
     flex-direction: column;
     padding: 0.8rem 4%;
   }
- 
 
   .nav-links a {
     color: white;
     font-size: 0.7rem;
-    text-decoration: none;
-    font-weight: 90;
-    transition: color 0.3s ease;
   }
 
   .hero-content {
@@ -286,14 +249,12 @@ body {
 
   .hero-image {
     padding-left: 0;
-    text-align: center;
   }
 
   .hero-image img {
-    width: 80%; /* Réduire à 80% de la taille originale */
-}
+    width: 80%;
+  }
 
-  /* Centrer le contenu de la section projects */
   .projects {
     padding: 3rem 5%;
     text-align: center;
@@ -320,7 +281,6 @@ body {
 
   .hero p {
     font-size: 1rem;
-    text-align: ;
   }
 
   .nav-right {
@@ -329,11 +289,6 @@ body {
   }
 }
 
-
-
-
-
-/* Theme sombre */
 [data-theme="dark"] {
   --primary-color: #e8e7ef;
   --text-light: #2a2a2a;
@@ -348,7 +303,6 @@ body {
   opacity: 0.2;
 }
 
-/* Image circulaire */
 .hero-image img {
   width: 300px;
   height: 300px;
@@ -376,14 +330,8 @@ body {
   transform: translateY(0);
 }
 
-.nav-links {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-
 .nav-links li {
-  margin: 1 0; /* Reduced margin between mobile links */
+  margin: 1 0;
 }
 
 .nav-links a {
@@ -398,34 +346,13 @@ body {
   color: var(--accent-color);
 }
 
-
-h5 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-family: 'Playfair Display', serif;
-  text-align: justify;
-  padding: 0 8px; /* Ajout d’un léger padding pour éviter le collage aux bords */
-}
-
-/* Assurer la compatibilité mobile */
 @media (max-width: 768px) {
   h5 {
-    font-size: 14px; /* Ajustement de la taille sur mobile si nécessaire */
-    line-height: 1.4; /* Amélioration de la lisibilité */
-    
-   
-  
+    font-size: 14px;
+    line-height: 1.4;
   }
 }
 
-
-
-
-
-
-/*education */
-
-/* education */
 .education {
   background: var(--primary-color);
   padding: 5rem 2rem;
@@ -516,8 +443,12 @@ h5 {
   border-left: 4px solid var(--accent-color);
   margin-left: 1rem;
   color: var(--text-light);
-  background: rgba(42, 42, 42, 0.85);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
+}
+
+[data-theme="dark"] .education-list li {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .education-list li strong {
@@ -530,7 +461,6 @@ h5 {
   color: var(--text-light);
 }
 
-/* Show the Education title on mobile */
 @media (max-width: 768px) {
   #education-content {
     display: none;
@@ -543,9 +473,8 @@ h5 {
 }
 
 @media (min-width: 769px) {
-  /* Keep the Education button style the same */
   #education-content {
-    display: none; /* Ensure content doesn't show on desktop */
+    display: none;
   }
 }
 
@@ -590,14 +519,11 @@ h5 {
   overflow: hidden;
 }
 
-
-
 .experience h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   position: relative;
-  
 }
 
 .experience h2::after {
@@ -654,10 +580,15 @@ h5 {
 .experience-content {
   width: 90%;
   padding: 2rem;
-  background: rgba(42, 42, 42, 0.85);
+  background: rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--accent-color);
   border-radius: 5px;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .experience-content {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .experience-content::before {
@@ -720,7 +651,6 @@ h5 {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .experience-timeline::before {
     left: 0;
@@ -746,11 +676,6 @@ h5 {
     font-size: 2rem;
   }
 }
-
-
-
-
-
 
 
 
@@ -918,10 +843,11 @@ h5 {
   font-size: 1.1em; /* texte plus petit */
   color: var(--accent-color);
   margin-bottom: 8px; /* moins de marge */
+  text-align: center;
 }
 .project-info strong{
     font-size: 1.1em; /* texte plus petit */
-  color: var(--accent-color);
+  color: var(--text-light);
   
 }
 
@@ -930,7 +856,7 @@ h5 {
     
      text-align: center;
      font-family: 'Courier New', Courier, monospace;
-     color: var(--accent-color);
+     color:var(--text-light);
 
 }
 
@@ -1034,12 +960,14 @@ h5 {
   font-size: 1.5em;
   color: var(--accent-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .certificate-card p {
   font-size: 1em;
   color: var(--primary-color);
   margin: 5px 0;
+  
 }
 
 /* Mode sombre */
