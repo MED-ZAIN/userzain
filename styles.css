@@ -733,7 +733,6 @@ body {
 
 .skills-icons {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
   font-size: 2.2rem;
   margin-bottom: 0;
@@ -755,13 +754,12 @@ body {
 /* Version mobile */
 @media (max-width: 768px) {
   .skills-icons {
-    gap: 2px;
-    font-size: 1rem; /* Taille réduite */
+    gap: 3px;
+    font-size: 1.2rem; /* Taille réduite */
     justify-content: center;
-    margin: 0; /* Suppression des marges latérales */
     padding: 0;
-    margin-bottom: 0;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
   }
 
   .skills-icons i, .skills-icons img {
