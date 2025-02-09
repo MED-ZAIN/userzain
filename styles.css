@@ -352,8 +352,12 @@ body {
     line-height: 1.6; /* Augmenté de 1.4 à 1.6 pour plus d'espacement */
     margin: 10px 0;   /* Ajout d'une marge verticale optionnelle */
     font-family: 'Arial', sans-serif;
-    font-style: oblique;
     text-align: justify;
+    word-spacing: -1px;
+    letter-spacing: 0px;
+    
+    
+   
   }
 
 @media (max-width: 768px) {
@@ -795,9 +799,8 @@ body {
 .projects h2::after {
   content: '';
   position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-600%);
+  bottom: 0;
+  left: 0;
   width: 100px;
   height: 4px;
   background: var(--accent-color);
@@ -942,9 +945,8 @@ body {
 .section h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
   width: 100px;
   height: 4px;
   background: var(--accent-color);
