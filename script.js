@@ -89,3 +89,11 @@ if (savedTheme) {
 
 // loading
 
+window.addEventListener('load', () => {
+  setTimeout(() => {
+      document.querySelector('.loading-screen').remove();
+      document.body.style.overflow = 'visible';
+  }, 5000);
+});
+
+
