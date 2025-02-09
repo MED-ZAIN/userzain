@@ -346,10 +346,21 @@ body {
   color: var(--accent-color);
 }
 
+
+  h5 {
+    font-size: 20px;
+    line-height: 1.6; /* Augmenté de 1.4 à 1.6 pour plus d'espacement */
+    margin: 10px 0;   /* Ajout d'une marge verticale optionnelle */
+    font-family: 'Arial', sans-serif;
+    font-style: oblique;
+    text-align: justify;
+  }
+
 @media (max-width: 768px) {
   h5 {
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 1; /* Augmenté de 1.4 à 1.6 pour plus d'espacement */
+    margin: 8px 0;   /* Ajout d'une marge verticale optionnelle */
   }
 }
 
@@ -722,44 +733,44 @@ body {
 
 .skills-icons {
   display: flex;
-  flex-wrap: wrap; /* Permet aux icônes de s’adapter sur plusieurs lignes si nécessaire */
-  gap: 15px; /* Réduction de l’espace entre les icônes */
-  font-size: 2.5rem; /* Taille des icônes sur desktop */
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 2.5rem;
   margin-bottom: 0;
+  margin-top: 20px;
   margin-left: 10px;
 }
 
 .skills-icons i, .skills-icons img {
   transition: transform 0.3s ease, color 0.3s ease;
-  width: 50px; /* Taille des images personnalisées (ex: Security Onion) */
+  width: 50px;
   height: 50px;
 }
 
 .skills-icons i:hover, .skills-icons img:hover {
-  transform: scale(1.1); /* Effet de zoom plus subtil */
+  transform: scale(1.1);
   color: #007BFF;
 }
 
-/* Responsive design pour les écrans plus petits (mobile) */
+/* Version mobile */
 @media (max-width: 768px) {
   .skills-icons {
-    gap: 10px; /* Réduction de l’espace entre les icônes */
-    font-size: 2rem; /* Réduction de la taille des icônes */
-    justify-content: center; /* Centrage des icônes sur mobile */
-    margin-bottom: 0; /* Suppression de l’espace supplémentaire */
-    padding-bottom: 0;
+    gap: 10px;
+    font-size: 1.8rem; /* Taille réduite */
+    justify-content: center;
+    margin: 0; /* Suppression des marges latérales */
+    padding: 0;
   }
 
   .skills-icons i, .skills-icons img {
-    width: 40px; /* Taille réduite des images */
-    height: 40px;
+    width: 35px; /* Taille réduite */
+    height: 35px;
   }
 
   .skills-icons i:hover, .skills-icons img:hover {
-    transform: scale(1.05); /* Effet de zoom encore plus discret */
+    transform: scale(1.05);
   }
 }
-
 
 
 
