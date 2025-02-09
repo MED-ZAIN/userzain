@@ -737,7 +737,7 @@ body {
   gap: 5px;
   font-size: 2.2rem;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-left: 10px;
 }
 
@@ -760,11 +760,14 @@ body {
     justify-content: center;
     margin: 0; /* Suppression des marges latérales */
     padding: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
   }
 
   .skills-icons i, .skills-icons img {
-    width: 30px; /* Taille réduite */
-    height: 30px;
+    width: 35px; /* Taille réduite */
+    height: 35px;
+    
   }
 
   .skills-icons i:hover, .skills-icons img:hover {
