@@ -743,8 +743,8 @@ body {
 
 .skills-icons i, .skills-icons img {
   transition: transform 0.3s ease, color 0.3s ease;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
 }
 
 .skills-icons i:hover, .skills-icons img:hover {
@@ -755,7 +755,7 @@ body {
 /* Version mobile */
 @media (max-width: 768px) {
   .skills-icons {
-    gap: 3px;
+    gap: 2px;
     font-size: 1rem; /* Taille réduite */
     justify-content: center;
     margin: 0; /* Suppression des marges latérales */
@@ -763,8 +763,8 @@ body {
   }
 
   .skills-icons i, .skills-icons img {
-    width: 35px; /* Taille réduite */
-    height: 35px;
+    width: 30px; /* Taille réduite */
+    height: 30px;
   }
 
   .skills-icons i:hover, .skills-icons img:hover {
