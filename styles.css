@@ -359,7 +359,7 @@ body {
 @media (max-width: 768px) {
   h5 {
     font-size: 14px;
-    line-height: 1; /* Augmenté de 1.4 à 1.6 pour plus d'espacement */
+    line-height: 1.2; /* Augmenté de 1.4 à 1.6 pour plus d'espacement */
     margin: 8px 0;   /* Ajout d'une marge verticale optionnelle */
   }
 }
@@ -734,8 +734,8 @@ body {
 .skills-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  font-size: 2.5rem;
+  gap: 5px;
+  font-size: 2.2rem;
   margin-bottom: 0;
   margin-top: 20px;
   margin-left: 10px;
@@ -755,8 +755,8 @@ body {
 /* Version mobile */
 @media (max-width: 768px) {
   .skills-icons {
-    gap: 10px;
-    font-size: 1.8rem; /* Taille réduite */
+    gap: 3px;
+    font-size: 1rem; /* Taille réduite */
     justify-content: center;
     margin: 0; /* Suppression des marges latérales */
     padding: 0;
