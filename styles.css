@@ -1189,3 +1189,43 @@ body {
       height: 16px;
   }
 }
+
+
+
+/* Tag */
+
+
+/* Styles pour les tags */
+.tags-container {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: #1a365d; /* Bleu foncé */
+  color: white;
+  border: 1px solid #2a4365;
+}
+
+/* Effet au survol */
+.tag:hover {
+  background-color: #2a4365;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .tag {
+      padding: 0.15rem 0.5rem;
+      font-size: 0.7rem;
+  }
+}
