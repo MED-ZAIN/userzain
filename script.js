@@ -89,11 +89,28 @@ if (savedTheme) {
 
 // loading
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-      document.querySelector('.loading-screen').remove();
-      document.body.style.overflow = 'visible';
-  }, 5000);
+/// Modifiez la partie du menu hamburger mobile
+document.addEventListener('mousemove', (e) => {
+  // Désactiver sur mobile
+  if (window.innerWidth > 768) { 
+    const hamburger = document.querySelector('.hamburger-menu');
+    hamburger.style.opacity = e.clientX < 50 ? "1" : "0";
+  }
 });
+
+// Ajouter un gestionnaire tactile
+document.querySelector('.hamburger-menu').addEventListener('touchend', (e) => {
+  e.preventDefault();
+  toggleMenu();
+});
+
+
+// Remplacer le scrollIntoView par
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+  behavior: 'smooth',
+  block: 'start',
+  inline: 'nearest'
+});
+
 
 
