@@ -755,9 +755,9 @@ body {
 @media (max-width: 768px) {
   .skills-icons {
     gap: 3px;
-    font-size: 1.2rem; /* Taille réduite */
+    font-size: 1.3rem; /* Taille réduite */
     justify-content: center;
-    margin-bottom: 0;
+    margin-bottom:10px;
     margin-top: 10px;
   }
 
