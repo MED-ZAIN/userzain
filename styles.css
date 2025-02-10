@@ -1064,6 +1064,7 @@ body {
   z-index: 1000; /* S'assurer qu'elles restent visibles */
   flex-wrap: nowrap; /* Éviter le retour à la ligne */
   width: 100%; /* Évite le décalage sur mobile */
+  
 }
 
 /* Style des icônes */
