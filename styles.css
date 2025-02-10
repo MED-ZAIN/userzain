@@ -1004,7 +1004,7 @@ body {
 .certificate-info p {
   margin: 5px 0;
   font-size: 0.9rem;
-  color: white;
+  color: var(--text-light);
 }
 
 .certificate-info .date {
@@ -1038,6 +1038,12 @@ body {
   .certificate-img {
     width: 40px;
     height: 40px;
+  }
+
+  [data-theme="dark"] {
+    --primary-color: #e8e7ef;
+    --text-light: #2a2a2a;
+    --gradient: linear-gradient(135deg, #2a2a2a 0%, #d3dbd1 100%);
   }
 }
 
@@ -1229,6 +1235,8 @@ body {
       padding: 0.15rem 0.5rem;
       font-size: 0.7rem;
   }
+
+  
 }
 
 
