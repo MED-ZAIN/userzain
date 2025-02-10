@@ -1082,12 +1082,7 @@ body {
   font-size: 1.5rem;
 }
 
-.social-icon:hover {
-  background: #ffd700;
-  color: #000000;
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+
 
 /* Appliquer les couleurs spécifiques correctement */
 .social-icon .fa-github { color: #414040 !important; }
