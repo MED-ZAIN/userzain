@@ -1395,7 +1395,10 @@ body {
   .loading-text {
     font-size: 1rem;
     padding: 0 10px;
-  }
+    font-weight: bold;
+    text-align: center;
+}
+
 }
 
 body {
