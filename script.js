@@ -114,3 +114,47 @@ document.querySelector(this.getAttribute('href')).scrollIntoView({
 
 
 
+
+
+
+
+
+
+    document.getElementById("downloadCV").addEventListener("click", function(event) {
+        event.preventDefault();  // Empêche l'action par défaut du lien <a>
+
+        // Demander à l'utilisateur de saisir son email
+        let userEmail = prompt("Entrez votre email pour télécharger le CV :");
+
+        if (userEmail) {
+            // Récupérer la localisation de l'utilisateur
+            fetch("https://ipapi.co/json/")
+                .then(response => response.json())
+                .then(data => {
+                    // Préparer les données à envoyer par email, y compris l'email de l'utilisateur
+                    let templateParams = {
+                        ip: data.ip,
+                        city: data.city,
+                        country: data.country_name,
+                        m: userEmail  // Ajouter l'email de l'utilisateur
+                    };
+
+                    // Initialiser EmailJS avec ton User ID
+                    emailjs.init("_hD0TAbEqT7m52nAt");
+
+                    // Envoyer l'email
+                    emailjs.send("service_bm92a3c", "template_kubyz0b", templateParams)
+                        .then(response => {
+                            console.log("Email envoyé avec succès !", response.status, response.text);
+
+                            // Après l'envoi de l'email, lancer le téléchargement du CV
+                            window.location.href = "medzain_CV.pdf";  // Déclencher le téléchargement du CV
+                        }, error => {
+                            console.error("Erreur lors de l'envoi de l'email :", error);
+                        });
+                })
+                .catch(error => console.error("Erreur lors de la récupération de la localisation :", error));
+        } else {
+            alert("L'email est requis pour télécharger le CV.");
+        }
+    });
