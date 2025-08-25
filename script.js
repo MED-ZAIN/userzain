@@ -43,18 +43,10 @@ function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 
-document.querySelector('.hamburger-menu').addEventListener('click', toggleMenu);
-
-// Affichage du menu hamburger au survol du côté gauche de l'écran
-document.addEventListener('mousemove', (e) => {
-  if (window.innerWidth > 768) { 
-    const hamburger = document.querySelector('.hamburger-menu');
-    hamburger.style.opacity = e.clientX < 50 ? "1" : "0";
-  }
-});
+document.querySelector('.hamburger').addEventListener('click', toggleMenu);
 
 // Ajouter un gestionnaire tactile
-document.querySelector('.hamburger-menu').addEventListener('touchend', (e) => {
+document.querySelector('.hamburger').addEventListener('touchend', (e) => {
   e.preventDefault();
   toggleMenu();
 });
@@ -63,37 +55,17 @@ document.querySelector('.hamburger-menu').addEventListener('touchend', (e) => {
 function toggleTheme() {
   const body = document.body;
   const currentTheme = body.getAttribute("data-theme");
-
-  // Basculer le thème
   const newTheme = currentTheme === "dark" ? "light" : "dark";
   body.setAttribute("data-theme", newTheme);
-
-  // Sauvegarder le choix de l'utilisateur
   localStorage.setItem("theme", newTheme);
+  const themeToggle = document.getElementById('theme-toggle');
+  themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
 }
 
 // Charger le thème sauvegardé au démarrage
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme") || "light";
   document.body.setAttribute("data-theme", savedTheme);
-});
-
-// Gestion du bouton de changement de thème
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-  body.setAttribute('data-theme', savedTheme);
+  const themeToggle = document.getElementById('theme-toggle');
   themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
-}
-
-
-
-
-
-
-
-
-
-
-
+});
