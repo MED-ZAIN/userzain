@@ -943,7 +943,12 @@ h5 {
   }
 
   .hero h1 {
-    font-size: 1.2rem; /* Reduced font size for the title */
+    font-size: 1.2rem;
+    white-space: normal;
+    overflow: visible;
+    width: 100%;
+    animation: none;
+    border-right: none;
   }
 
   .hero p {
@@ -1137,6 +1142,10 @@ h5 {
 }
 
 [data-theme="dark"] .navbar {
+  background: rgba(155, 154, 155, 0.95);
+}
+
+[data-theme="dark"] .nav-links {
   background: rgba(155, 154, 155, 0.95);
 }
 
