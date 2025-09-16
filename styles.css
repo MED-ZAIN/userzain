@@ -1125,6 +1125,7 @@ h5 {
 
   .loading-screen {
     -webkit-overflow-scrolling: touch;
+    
   }
 
   .loading-text {
@@ -1132,6 +1133,7 @@ h5 {
     padding: 0 10px;
     font-weight: bold;
     text-align: center;
+   
   }
 }
 
