@@ -1,33 +1,60 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio-Mohamed-ZAIN</title>
+    <title>Portfolio - Mohamed ZAIN</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/font/simple-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Visitor Counter Styles */
+        .visitor-counter {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(255, 77, 90, 0.1), rgba(42, 42, 42, 0.1));
+            color: #f5f5f5;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 77, 90, 0.2);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .visitor-counter span {
+            font-weight: 700;
+            color: #FF4D5A;
+            display: inline-block;
+            transition: transform 0.5s ease;
+        }
+        [data-theme="dark"] .visitor-counter {
+            background: linear-gradient(135deg, rgba(42, 42, 42, 0.2), rgba(227, 227, 227, 0.2));
+            color: #2a2a2a;
+            border-top: 1px solid rgba(42, 42, 42, 0.3);
+        }
+        [data-theme="dark"] .visitor-counter span {
+            color: #2a2a2a;
+        }
+    </style>
 </head>
 <body data-theme="light">
-    <!-- Loading -->
     <div class="loading-screen">
         <div class="tech-loader" aria-label="Chargement en cours"></div>
         <div class="loading-text">Actuellement en recherche d’une opportunité professionnelle</div>
     </div>
    
     <nav class="navbar">
-        <h2>Portfolio-Mohamed ZAIN</h2>
+        <h2>Portfolio - Mohamed ZAIN</h2>
         <ul class="nav-links">
-            <li><a href="#home">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#certificat">Certificat</a></li>
+            <li><a href="#home">À propos</a></li>
+            <li><a href="#education">Éducation</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#certificat">Certificats</a></li>
         </ul>
         <div class="nav-right">
             <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">🌓</button>
@@ -37,9 +64,9 @@
 
     <section class="hero" id="home">
         <div class="hero-content reveal">
-            <h1 class="typing-effect">Ingénieur d'État en IT Option Génie Logiciel</h1>
-            <p>Développeur | DevOps | Administration et Architecture de Réseau</p>
-            <h5>Je suis ingénieur d’État en génie informatique, option génie logiciel, avec 16 ans d’expérience au sein des Forces Royales Air. J’ai travaillé pendant 3 ans dans le domaine de la sécurité des réseaux et de la cybersécurité.</h5>
+            <h1 class="typing-effect">Ingénieur d'État en Génie Logiciel</h1>
+            <p>Développeur | DevOps | Réseaux & Cybersécurité</p>
+            <h5>Ingénieur d’État en informatique avec 16 ans d’expérience au sein des Forces Royales Air, dont 3 ans spécialisés en sécurité réseau et cybersécurité.</h5>
             <div class="skills-section">
                 <div class="skills-icons">
                     <i class="devicon-angularjs-plain colored" title="Angular"></i>
@@ -55,22 +82,24 @@
                     <i class="devicon-spring-plain colored" title="Spring Boot"></i>
                 </div>
             </div>
-            <a href="CV_MedZain_16_09_2025.pdf" id="downloadCV">
-                <button class="cta-button">Télécharger Mon CV</button>
-            </a>
-            <div class="social-icons">
-                <a href="https://github.com/MED-ZAIN" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
+            <div class="cta-social-container">
+                <a href="CV_MedZain_16_09_2025.pdf" id="downloadCV">
+                    <button class="cta-button">Télécharger mon CV</button>
                 </a>
-                <a href="mailto:medzainmed08@gmail.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/𝑴𝒐𝒉𝒂𝒎𝒆𝒅-zain-4899a5191" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://wa.me/212661241508?text=Bonjour,%20je%20souhaite%20vous%20contacter." target="_blank" class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+                <div class="social-icons">
+                    <a href="https://github.com/MED-ZAIN" target="_blank" class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:medzainmed08@gmail.com" class="social-icon gmail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/𝑴𝒐𝒉𝒂𝒎𝒆𝒅-zain-4899a5191" target="_blank" class="social-icon linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/212661241508?text=Bonjour,%20je%20souhaite%20vous%20contacter." target="_blank" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="hero-image">
@@ -80,48 +109,48 @@
 
     <section class="education" id="education">
         <div class="education-content">
-            <h2>Education</h2>
-            <p>Découvrez mon parcours académique et mes qualifications professionnelles.</p>
+            <h2>Éducation</h2>
+            <p>Mon parcours académique et mes qualifications professionnelles.</p>
             <ul class="education-list">
                 <li>
                     <strong>Diplôme d'Ingénieur d'État</strong><br>
-                    Génie informatique, option Génie logiciel<br>
+                    Génie Informatique, Option Génie Logiciel<br>
                     Universiapolis-Polytechnique Agadir (2022 - 2025)
                 </li>
                 <li>
-                    <strong>Licence</strong><br>
-                    Licence fondamentale - Option : Mathématiques Appliquées<br>
-                    Faculté de l'Université Ibn Zohr Agadir (2017-2021)
+                    <strong>Licence Fondamentale</strong><br>
+                    Mathématiques Appliquées<br>
+                    Université Ibn Zohr Agadir (2017-2021)
                 </li>
                 <li>
                     <strong>Bac+4</strong><br>
-                    Specialite : Sciences Techniques<br>
-                    Ecoles Royales Air Marrackech (2007-2012)
+                    Sciences Techniques<br>
+                    Écoles Royales Air Marrakech (2007-2012)
                 </li>
                 <li>
-                    <strong>Bac</strong><br>
-                    Option : Sciences Expérimentales<br>
-                    Lycee hassan 1er Tiznit (1994-2007)
+                    <strong>Baccalauréat</strong><br>
+                    Sciences Expérimentales<br>
+                    Lycée Hassan 1er Tiznit (1994-2007)
                 </li>
             </ul>
         </div>
     </section>
     
     <section class="experience" id="experience">
-        <h2>Expérience</h2>
-        <p>Mon parcours professionnel au sein des Forces Royales Air</p>
+        <h2>Expérience Professionnelle</h2>
+        <p>Mon parcours au sein des Forces Royales Air</p>
         <div class="experience-timeline">
             <article class="experience-item">
                 <div class="experience-content">
                     <div class="experience-period">2022 - 2024</div>
-                    <h3 class="experience-title">Spécialiste en laboratoire informatique</h3>
-                    <div class="experience-location">Etat-Major de la Zone Sud des FAR - Agadir</div>
+                    <h3 class="experience-title">Spécialiste en Laboratoire Informatique</h3>
+                    <div class="experience-location">État-Major de la Zone Sud des FAR - Agadir</div>
                     <div class="experience-description">
                         Gestion et maintenance des infrastructures réseau et systèmes
                     </div>
                     <div class="experience-skills">
-                        <span class="skill-tag">Routeur(VTP,OSPF)</span>
-                        <span class="skill-tag">Switch(VLANs)</span>
+                        <span class="skill-tag">Routeur (VTP, OSPF)</span>
+                        <span class="skill-tag">Switch (VLANs)</span>
                         <span class="skill-tag">ADDS-DNS-DHCP</span>
                         <span class="skill-tag">FortiGate</span>
                     </div>
@@ -131,7 +160,7 @@
                 <div class="experience-content">
                     <div class="experience-period">2012 - 2022</div>
                     <h3 class="experience-title">Instructeur des Forces Royales Air</h3>
-                    <div class="experience-location">Marrackech,Laayoune, Guelmim,Agadir</div>
+                    <div class="experience-location">Marrakech, Laayoune, Guelmim, Agadir</div>
                     <div class="experience-description">
                         Formation et supervision des équipes militaires
                     </div>
@@ -141,9 +170,9 @@
                 <div class="experience-content">
                     <div class="experience-period">2008-2012</div>
                     <h3 class="experience-title">Stage et Formation</h3>
-                    <div class="experience-location">ERA, Marrackech</div>
+                    <div class="experience-location">ERA, Marrakech</div>
                     <div class="experience-description">
-                        Formation et stage dans l'ecole des force Royales Air
+                        Formation et stage à l'École des Forces Royales Air
                     </div>
                 </div>
             </article>
@@ -152,14 +181,14 @@
 
     <section class="projects" id="projects">
         <h2>Mes Projets</h2>
-        <p>Quelques projets que j'ai réalisés en développement web, logiciel et sécurité réseau.</p>
+        <p>Projets en développement web, logiciel et sécurité réseau.</p>
         <div class="project-grid">
             <div class="project-card reveal">
                 <div class="project-image-container">
                     <img src="images/imageU.png" class="project-image" alt="Projet de sécurité des infrastructures réseau">
                 </div>
                 <div class="project-info">
-                    <h3>Stage de 5ᵉ année – Projet de Fin d'Études : Détection des vulnérabilités dans le code source avec l’IA</h3>
+                    <h3>Stage de 5ᵉ Année – PFE : Détection des Vulnérabilités avec IA</h3>
                     <div class="tags-container">
                         <span class="tag">Spring Boot</span>
                         <span class="tag">Thymeleaf</span>
@@ -186,17 +215,17 @@
                     <img src="images/imageU.png" class="project-image" alt="Sécurité des infrastructures réseau">
                 </div>
                 <div class="project-info">
-                    <h3>Stage de 4ᵉ Année en Sécurité des Infrastructures Réseau</h3>
+                    <h3>Stage de 4ᵉ Année : Sécurité des Infrastructures Réseau</h3>
                     <div class="tags-container">
                         <span class="tag">ADDS</span>
                         <span class="tag">DNS</span>
                         <span class="tag">DHCP</span>
                         <span class="tag">Router (OSPF)</span>
                         <span class="tag">FortiGate</span>
-                        <span class="tag">Switch(VLANs)</span>
+                        <span class="tag">Switch (VLANs)</span>
                     </div>
                     <p><strong>Union IT Service, Casablanca</strong></p>
-                    <p><strong>Aout-Octobre 2024</strong></p>
+                    <p><strong>Août-Octobre 2024</strong></p>
                     <a href="https://drive.google.com/file/d/131rYjvzebxOtfQh_BlCHIfpXuzmq__Pb/view?usp=sharing" class="read-more-link">
                         Voir le Lab
                         <svg class="arrow-icon" viewBox="0 0 24 24">
@@ -210,7 +239,7 @@
                     <img src="images/imageAF.png" class="project-image" alt="Opérations cyberdéfensives">
                 </div>
                 <div class="project-info">
-                    <h3>Formation sur les opérations cyberdéfensives, African Lion</h3>
+                    <h3>Formation : Opérations Cyberdéfensives, African Lion</h3>
                     <div class="tags-container">
                         <span class="tag">Security Onion</span>
                         <span class="tag">Caldera</span>
@@ -220,7 +249,7 @@
                     <p><strong>État-Major de la Zone Sud, Agadir</strong></p>
                     <p><strong>22 Avril 2024</strong></p>
                     <a href="#" class="read-more-link">
-                        Lire tous
+                        En savoir plus
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -232,7 +261,7 @@
                     <img src="images/imageAF.png" class="project-image" alt="Opérations cyberdéfensives">
                 </div>
                 <div class="project-info">
-                    <h3>Formation sur la CyberSecurity <br>African Lion</h3>
+                    <h3>Formation : Cybersécurité, African Lion</h3>
                     <div class="tags-container">
                         <span class="tag">Security Onion</span>
                         <span class="tag">Linux</span>
@@ -245,7 +274,7 @@
                     <p><strong>État-Major de la Zone Sud, Agadir</strong></p>
                     <p><strong>17 Mai 2023</strong></p>
                     <a href="#" class="read-more-link">
-                        Lire tous
+                        En savoir plus
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -254,10 +283,10 @@
             </div>
             <div class="project-card reveal">
                 <div class="project-image-container">
-                    <img src="images/imagePO.png" class="project-image" alt="Stage 3e année cycle des Ingénieurs">
+                    <img src="images/imagePO.png" class="project-image" alt="Projet académique">
                 </div>
                 <div class="project-info">
-                    <h3>Projet académique : Développement d'une application web</h3>
+                    <h3>Projet Académique : Application Web</h3>
                     <div class="tags-container">
                         <span class="tag">JEE</span>
                         <span class="tag">HTML5</span>
@@ -271,7 +300,7 @@
                     <p><strong>Universiapolis-Polytechnique</strong></p>
                     <p><strong>Décembre 2023</strong></p>
                     <a href="https://drive.google.com/file/d/1ukd0OG-ZGhgOIVlRnoyaw5vAvD-z4WGe/view?usp=sharing" class="read-more-link">
-                        Voir la vidéo
+                        Voir la Vidéo
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -280,20 +309,20 @@
             </div>
             <div class="project-card reveal">
                 <div class="project-image-container"> 
-                    <img src="images/imageAM.png" class="project-image" alt="Stage 3e année cycle des Ingénieurs">
+                    <img src="images/imageAM.png" class="project-image" alt="Application d’éco-commerce">
                 </div>
                 <div class="project-info">
-                    <h3>Stage de 3ᵉ année : Développement d’une application d’éco-commerce</h3>
+                    <h3>Stage de 3ᵉ Année : Application d’Éco-commerce</h3>
                     <div class="tags-container">
                         <span class="tag">React TS</span>
                         <span class="tag">Bootstrap</span>
                         <span class="tag">Node.js</span>
                         <span class="tag">MongoDB</span>
                     </div>
-                    <p><strong>A distance Virginia, United States of America</strong></p>
+                    <p><strong>À distance, Virginia, USA</strong></p>
                     <p><strong>Août-Octobre 2023</strong></p>
                     <a href="https://drive.google.com/file/d/1NYq6lD1VHpoIOiR_ssS8PHjpDCGQyj97/view?usp=sharing" class="read-more-link">
-                        Voir la vidéo
+                        Voir la Vidéo
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -302,19 +331,19 @@
             </div>
             <div class="project-card reveal">
                 <div class="project-image-container"> 
-                    <img src="images/imageFI.png" class="project-image" alt="Stage 3e année cycle des Ingénieurs">
+                    <img src="images/imageFI.png" class="project-image" alt="Création de portfolios">
                 </div>
                 <div class="project-info">
                     <h3>Création de Portfolios</h3>
                     <div class="tags-container">
-                        <span class="tag">javascript</span>
+                        <span class="tag">JavaScript</span>
                         <span class="tag">HTML5</span>
-                        <span class="tag">Css</span>
+                        <span class="tag">CSS</span>
                     </div>
-                    <p><strong>Projet du Free-Lance</strong></p>
+                    <p><strong>Projet Freelance</strong></p>
                     <p><strong>2024</strong></p>
                     <a href="https://drive.google.com/file/d/1_pp74ItVwsXhen9iQIFx4W5uC0DYmagw/view?usp=sharing" class="read-more-link">
-                        Voir la vidéo
+                        Voir la Vidéo
                         <svg class="arrow-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -328,20 +357,20 @@
         <h2>Certificats</h2>
         <div class="certificates-container">
             <div class="certificate">
-                <img src="images/oracle1.jpg" alt="git" class="certificate-img">
+                <img src="images/oracle1.jpg" alt="Oracle AI" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
                         <a href="https://drive.google.com/file/d/10D9Omhf_8soXfbLhT6DuZbmzwdwUeMXH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Oracle Cloud Infrastructure 2025 Certified Generative AI Professional <i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Oracle</p>
-                    <p class="date">Aout 12, 2025</p>
+                    <p class="date">Août 12, 2025</p>
                 </div>
             </div>
             <div class="certificate">
-                <img src="images/imageO.png" alt="git" class="certificate-img">
+                <img src="images/imageO.png" alt="Git & GitHub" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1LZxCQbU6KpAnLLv0f7twsRGv0qQ1SK5o/view?usp=sharing" target="_blank" rel="noopener noreferrer">Git & GitHub pour Développeurs : Contrôle de Version, Branches et Pull Requests Simplifiés <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1LZxCQbU6KpAnLLv0f7twsRGv0qQ1SK5o/view?usp=sharing" target="_blank" rel="noopener noreferrer">Git & GitHub pour Développeurs <i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Orange</p>
                     <p class="date">Juillet 12, 2025</p>
@@ -361,20 +390,20 @@
                 <img src="images/imageG.png" alt="Google Cybersecurity" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/ENQHJD634MX4" target="_blank" rel="noopener noreferrer">Cybersecurity <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/ENQHJD634MX4" target="_blank" rel="noopener noreferrer">Cybersécurité <i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Google-Coursera</p>
-                    <p class="date">Oct 3, 2024</p>
+                    <p class="date">Octobre 3, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imageG.png" alt="Google Admin" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1q804dasIUHaDycXcK4on9dgTq7SFyrT1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Admini. du Réseau <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1q804dasIUHaDycXcK4on9dgTq7SFyrT1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Administration Réseau <i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Google-Coursera</p>
-                    <p class="date">March 24, 2024</p>
+                    <p class="date">Mars 24, 2024</p>
                 </div>
             </div>
             <div class="certificate">
@@ -384,14 +413,14 @@
                         <a href="https://drive.google.com/file/d/19rbJKYFvOAkGGCBHpj0h3vvUfr8-GG65/view?usp=sharing" target="_blank" rel="noopener noreferrer">Ethical Hacking<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>EC-Council</p>
-                    <p class="date">May 3, 2024</p>
+                    <p class="date">Mai 3, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imageEC.png" alt="EC-Council SQL Injection" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1XvGIMO2C6hHnkvcMkCDTR4mQhS2Rl8pp/view?usp=sharing" target="_blank" rel="noopener noreferrer">SQL Inj. Attackes<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1XvGIMO2C6hHnkvcMkCDTR4mQhS2Rl8pp/view?usp=sharing" target="_blank" rel="noopener noreferrer">SQL Injection Attacks<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>EC-Council</p>
                     <p class="date">Mars 28, 2024</p>
@@ -404,7 +433,7 @@
                         <a href="https://www.coursera.org/account/accomplishments/certificate/5GKXWX3DNCSW" target="_blank" rel="noopener noreferrer">Agile (Jira)<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Google-Coursera</p>
-                    <p class="date">Oct 3, 2024</p>
+                    <p class="date">Octobre 3, 2024</p>
                 </div>
             </div>
             <div class="certificate">
@@ -414,17 +443,17 @@
                         <a href="https://drive.google.com/file/d/1MA0vDnTgarzy70vir7Xs2Ohme_uNRO7I/view?usp=sharing" target="_blank" rel="noopener noreferrer">Wireshark<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Coursera-Network</p>
-                    <p class="date">Oct 3, 2024</p>
+                    <p class="date">Octobre 3, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imageP.png" alt="Job Interview Prep" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1e3a8ADY59kVRqo26Hr-IHmg6q21Tw72i/view?usp=sharing" target="_blank" rel="noopener noreferrer">Prep.for Job Inter.<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1e3a8ADY59kVRqo26Hr-IHmg6q21Tw72i/view?usp=sharing" target="_blank" rel="noopener noreferrer">Préparation aux Entretiens<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Coursera-Network</p>
-                    <p class="date">Feb 8, 2025</p>
+                    <p class="date">Février 8, 2025</p>
                 </div>
             </div>
             <div class="certificate">
@@ -434,42 +463,47 @@
                         <a href="https://www.coursera.org/account/accomplishments/certificate/6VAMN7GTEAW5" target="_blank" rel="noopener noreferrer">SOC<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>Cisco-Coursera</p>
-                    <p class="date">Oct 3, 2024</p>
+                    <p class="date">Octobre 3, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imagesIBM.png" alt="IBM Python" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1MGr2zpPcIoNHSiY4LK_uLoTbQt_7hEFN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Python for Data Sc.<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1MGr2zpPcIoNHSiY4LK_uLoTbQt_7hEFN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Python for Data Science<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>IBM-Coursera</p>
-                    <p class="date">avril 21, 2024</p>
+                    <p class="date">Avril 21, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imagesIBM.png" alt="IBM Big Data" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/1oc8CC0LPeArgFlyfAu9ez6EqzsYN8Ysn/view?usp=sharing" target="_blank" rel="noopener noreferrer">Intro.Big Data(Spark,Hadoop)<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/1oc8CC0LPeArgFlyfAu9ez6EqzsYN8Ysn/view?usp=sharing" target="_blank" rel="noopener noreferrer">Introduction au Big Data (Spark, Hadoop)<i class="fas fa-external-link-alt"></i></a>
                     </h3>
                     <p>IBM-Coursera</p>
-                    <p class="date">avril 11, 2024</p>
+                    <p class="date">Avril 11, 2024</p>
                 </div>
             </div>
             <div class="certificate">
                 <img src="images/imageSPR.png" alt="Spring MVC" class="certificate-img">
                 <div class="certificate-info">
                     <h3>
-                        <a href="https://drive.google.com/file/d/14gPpZJv_sIeTirq-BX69R-gRP6M-TEy1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Spring(MVC,Boot),Rest Contro.<i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://drive.google.com/file/d/14gPpZJv_sIeTirq-BX69R-gRP6M-TEy1/view?usp=sharing" target="_blank" rel="noopener noreferrer">Spring (MVC, Boot), REST Controllers<i class="fas fa-external-link-alt"></i></a>
                     </h3>
-                    <p>Learn Quest-Coursera</p>
-                    <p class="date">Dec 18, 2024</p>
+                    <p>LearnQuest-Coursera</p>
+                    <p class="date">Décembre 18, 2024</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer class="visitor-counter">
+        <p>Visiteurs : <span id="visitor-count">0</span></p>
+    </footer>
+
+    <div class="cursor"></div>
     <script src="script.js"></script>
 </body>
 </html>
